@@ -24,7 +24,6 @@ public class Max {
      //range
     // work on edge cases here, like array being null
     static int maxRange(int[] arr, int start, int end) {
-        if(start > end) {
             return -1;
         }
 
@@ -33,7 +32,6 @@ public class Max {
         }
 
         int maxVal = arr[start];
-        for (int i = 1; i<= end; i++){
             if(arr[i]> maxVal) {
                 maxVal = arr[i];
             }
