@@ -1,13 +1,16 @@
-public class BinarySearch {
+package com.khyati;
+
+public class Floor {
     static void main(String[] args) {
-     int[] arr = {-1,-3,0,2,3,45,67,88,90};
-     int target = -5 ;
-     int ans = binarySearch(arr,target);
+      int[] arr = {-1,-3,0,2,3,45,67,88,90};
+     int target = 10;
+     int ans = floor(arr,target);
         System.out.println(ans);
     }
-    //return the index
-    // return -1  if it does not exist
-    static int binarySearch(int[] arr , int  target){
+    //return the index : greatest no. <= target
+
+    static int floor(int[] arr , int  target){
+
         int start = 0;
         int end =arr.length-1;
 
@@ -25,6 +28,6 @@ public class BinarySearch {
                 return mid;
             }
         }
-        return -1;
+        return end;
     }
 }
