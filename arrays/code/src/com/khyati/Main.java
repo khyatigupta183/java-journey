@@ -1,4 +1,4 @@
-package com.khyati;
+﻿package com.khyati;
 
 public class Main {
     static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Main {
         // store 5 no.
 //        int[] no = new int[5];
 //        //or directly
-//        int[] no2 ={6,23,11,2,4};
+//       int[] no2 ={6,23,11,2,4};
 
         int[] no; // declaration of array no is getting defined in the stack
         no = new int[5]; // initialization :actually here object is being created in the memory (heap)
@@ -20,5 +20,19 @@ public class Main {
         for(String element : arr){
             System.out.println(element);
         }
+    }
+}
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int count = 1; // 1st one is also unique
+        int k = 1;
+        for (int i =1; i <nums.length; i++){
+            if(nums[i] != nums[k-1]){
+                nums[k]=nums[i];
+                k++;
+                count ++;
+            }
+        }
+        return count;
     }
 }
